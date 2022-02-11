@@ -20,7 +20,7 @@ function getCurrentBalance() {
     const previousBalance = parseFloat(previousBalanceText);
     return previousBalance;
 }
-
+//balance update
 function getBalanceTotal(inputAmount, isAdd) {
     const balanceUpdate = document.getElementById('balance');
     const previousBalance = getCurrentBalance();
@@ -36,32 +36,14 @@ function getBalanceTotal(inputAmount, isAdd) {
 
 
 
-
+// deposit button handler
 document.getElementById('deposit-btn').addEventListener('click', function () {
-    /*  const depositInput = document.getElementById('input-deposit');
-     const depositAmountText = depositInput.value;
-     const depositAmount = parseFloat(depositAmountText); */
     const depositAmount = getInput('input-deposit');
-    //Update deposit
-    /*  const depositTotoal = document.getElementById('deposit-total');
-     const previousDepositeTotalText = depositTotoal.innerText;
-     const previousDepositeTotal = parseFloat(previousDepositeTotalText);
-     const currentDepositeTotal = depositAmount + previousDepositeTotal;
-     depositTotoal.innerText = currentDepositeTotal; */
+    //Update deposit total with error handler
     if (depositAmount > 0) {
         getTotal('deposit-total', depositAmount);
         getBalanceTotal(depositAmount, true);
     }
-
-    //balance update
-    /*  const balanceUpdate = document.getElementById('balance');
-     const previousBalanceText = balanceUpdate.innerText;
-     const previousBalance = parseFloat(previousBalanceText);
-     const currentBalance = previousBalance + depositAmount;
-     balanceUpdate.innerText = currentBalance; */
-
-
-
 
 })
 
