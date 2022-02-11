@@ -1,3 +1,4 @@
+//get value from input field when you click on any button
 function getInput(input) {
     const inputAmount = document.getElementById(input);
     const inputAmountText = inputAmount.value;
@@ -6,7 +7,7 @@ function getInput(input) {
     inputAmount.value = "";
     return Amount;
 }
-
+// deposit and withdraw dashboard is updating here
 function getTotal(total, amount) {
     const Totoal = document.getElementById(total);
     const previousTotalText = Totoal.innerText;
@@ -14,13 +15,16 @@ function getTotal(total, amount) {
     const currentTotal = amount + previousTotal;
     Totoal.innerText = currentTotal;
 }
+
+//balance updating double function code
+
 function getCurrentBalance() {
     const balanceUpdate = document.getElementById('balance');
     const previousBalanceText = balanceUpdate.innerText;
     const previousBalance = parseFloat(previousBalanceText);
-    return previousBalance;
+    return previousBalance; //getting current balance value from here
 }
-//balance update
+//updating balance 
 function getBalanceTotal(inputAmount, isAdd) {
     const balanceUpdate = document.getElementById('balance');
     const previousBalance = getCurrentBalance();
